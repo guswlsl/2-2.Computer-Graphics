@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
-
-using namespace std; // 네임스페이스 추가
+using namespace std;
 
 class VECTOR3D
 {
@@ -72,10 +71,10 @@ int main()
     VECTOR3D addition = a + b;
     VECTOR3D subtraction = a - b;
     VECTOR3D scalarMultiplication = a * 5.0f;
-    a.Normalize();
     float magnitudeA = a.Magnitude();
     float dotProduct = a.InnerProduct(b);
     VECTOR3D crossProduct = a.CrossProduct(b);
+    a.Normalize();
 
     cout << "Addition: (" << addition.x << ", " << addition.y << ", " << addition.z << ")\n";
     cout << "Subtraction: (" << subtraction.x << ", " << subtraction.y << ", " << subtraction.z << ")\n";
